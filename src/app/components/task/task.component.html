@@ -1,0 +1,50 @@
+<div class="card mb-2">
+    <div class="card-header">
+        <div class="name">
+            <label for="name" >Name:</label>
+            <label for="label" class="label">{{ task.name }}</label>
+        </div>
+        <div class="date">
+            <span class="date">*{{ task.date | date:'short' }}*</span>
+            <small>(Date of creation)</small>
+        </div>
+        <div>
+            <button class="btn btn-light" (click) = "task.hideRecipe = !task.hideRecipe">
+                    <img src="https://image.flaticon.com/icons/svg/1/1351.svg"
+                    class="img" alt="Recipe">
+                    <small>(show)</small>
+            </button>
+            <button class="btn btn-light" (click) = "task.hideEdit = !task.hideEdit">
+                    <img src="https://image.flaticon.com/icons/svg/256/256224.svg"
+                    class="img" alt="Pencil">
+                    <small>(Edit)</small>
+            </button>
+            <button class="btn btn-light" (click) = "deleteTask(task)">
+                    <img src="https://image.flaticon.com/icons/svg/1214/1214594.svg"
+                     class="img" alt="Delete">
+                     <small>(Delt.)</small>
+            </button>
+        </div>
+    </div>
+    <div class = "card-body" [hidden] = "task.hideRecipe">
+        {{ task.description }}
+    </div>
+    <form class="form" [hidden] = "task.hideEdit">
+        <h3>Here you can change the name and description of the recipe</h3>
+        <div class = "form-group">
+            <div class="exchange">
+                <label class="label-exchange">Exchange Name</label>
+                <input type="text" class = "form-control" 
+                    placeholder = "Update recipe..."
+                    [(ngModel)] = "task.name" name="name">
+            </div>
+            <div class="exchange">
+                <label class="label-exchange">Exchange Description</label>
+                <textarea cols="10" rows="3" type = "text" class = "form-control" 
+                    placeholder="Update recipe..." [(ngModel)] = "task.description" 
+                    name="description">
+                </textarea>
+           </div> 
+        </div>
+    </form>
+</div>

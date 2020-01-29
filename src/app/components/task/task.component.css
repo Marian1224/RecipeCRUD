@@ -1,0 +1,82 @@
+.card {
+    padding: 0;
+    box-shadow: 0 0 10px;
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    width: 25%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.date {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.label {
+    font-weight: 700;
+    font-size: larger;
+    text-decoration: underline;
+}
+
+.btn {
+    margin-left: 5px;
+    width: 65px;
+}
+
+.form {
+    margin-top: 5px;
+    background-color: #DEDFE0;
+    text-align: center;
+}
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+.img {
+    width: 25px;
+}
+
+.date {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.exchange {
+    color: red;
+    display: flex;
+    align-items: flex-start;
+}
+
+.label-exchange {
+    width: 25%;
+}
+
+@media(max-width: 475px) {
+    .card-header {
+        flex-direction: column;
+    }
+    .label-exchange {
+        width: 45%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .card-header {
+        flex-direction: column;
+    }
+    .name {
+        align-items: center;
+    }
+    .label {
+        font-size: 20px
+    }
+}

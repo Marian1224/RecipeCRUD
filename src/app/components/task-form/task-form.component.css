@@ -1,0 +1,14 @@
+.card {
+    box-shadow: 0 0 10px;
+}
+.label {
+    font-size: 20px;
+    font-weight: 700;
+}
+.ng-valid[required], .ng-valid-required {
+    border-left: 5px solid green;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid red;
+}

@@ -1,0 +1,29 @@
+.container {
+    box-shadow: 0 0 10px;   
+}
+
+.row {
+    justify-content: space-between;
+}
+.div-1 {
+    width: 40%;
+}
+
+.div-2 {
+    width: 57%;
+}
+
+@media(max-width: 768px) {
+    .row {
+        flex-direction: column-reverse;
+        align-items: center;  
+    }   
+     .div-1 {
+         width: 90%;
+         margin-bottom: 20px;
+     }
+
+     .div-2 {
+        width: 90%;
+    }
+}
